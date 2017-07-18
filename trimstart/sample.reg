@@ -1,0 +1,8 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\mpc-be64.mp4\shell\trimstart]
+@="TrimStart"
+
+[HKEY_CLASSES_ROOT\mpc-be64.mp4\shell\trimstart\command]
+@="\"D:\\app\\ffmpeg-20151028-git-dd36749-win64-static\\bin\\trimstart.exe\" \"%1\""
+
