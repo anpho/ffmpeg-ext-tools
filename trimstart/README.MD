@@ -8,7 +8,7 @@ TrimStart
 
 ## How to setup
 
-1. Save trimstart.exe to somewhere you like, e.g. `d:\apps\ffmpeg\bin
+1. Save trimstart.exe to somewhere you like, e.g. `d:\apps\ffmpeg\bin`
 2. Now you have the absolute path to this tool : `d:\apps\ffmpeg\bin\trimstart.exe`
 3. Open `regedit`
 4. Expand `HKEY_CLASSES_ROOT` and find the ext item, e.g. `.mp4`
