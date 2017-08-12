@@ -1,0 +1,29 @@
+<RCC>
+    <qresource prefix="/ic">
+        <file>res/icon/ic_add_black_48dp.png</file>
+        <file>res/icon/ic_build_black_48dp.png</file>
+        <file>res/icon/ic_cancel_black_48dp.png</file>
+        <file>res/icon/ic_check_black_48dp.png</file>
+        <file>res/icon/ic_check_circle_black_48dp.png</file>
+        <file>res/icon/ic_close_black_48dp.png</file>
+        <file>res/icon/ic_error_outline_black_48dp.png</file>
+        <file>res/icon/ic_exit_to_app_black_48dp.png</file>
+        <file>res/icon/ic_extension_black_48dp.png</file>
+        <file>res/icon/ic_help_outline_black_48dp.png</file>
+        <file>res/icon/ic_info_outline_black_48dp.png</file>
+        <file>res/icon/ic_language_black_48dp.png</file>
+        <file>res/icon/ic_link_black_48dp.png</file>
+        <file>res/icon/ic_local_post_office_black_48dp.png</file>
+        <file>res/icon/ic_mail_outline_black_48dp.png</file>
+        <file>res/icon/ic_power_settings_new_black_48dp.png</file>
+        <file>res/icon/ic_public_black_48dp.png</file>
+        <file>res/icon/ic_remove_black_48dp.png</file>
+        <file>res/icon/ic_border_all_black_48dp.png</file>
+        <file>res/icon/ic_border_clear_black_48dp.png</file>
+        <file alias="ICON">icon.ico</file>
+    </qresource>
+    <qresource prefix="/ts">
+        <file>app_zh_CN.qm</file>
+        <file>app_zh_CN.ts</file>
+    </qresource>
+</RCC>
