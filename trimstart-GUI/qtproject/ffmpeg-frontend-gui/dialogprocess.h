@@ -34,6 +34,7 @@ private:
     int currentProcessingFile = -1;
 private slots:
     void start_process();
+    void channel_ready_read(int channelid);
     void start_read_output();
     void start_read_err_output();
     void finish_process(int exitcode, QProcess::ExitStatus status);

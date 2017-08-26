@@ -2,6 +2,7 @@
 #include <QApplication>
 #include <QSettings>
 #include <QTranslator>
+#include <QDesktopWidget>
 #include <QDebug>
 #include <QLocale>
 //#include <QLibraryInfo>
@@ -27,6 +28,7 @@ int main(int argc, char *argv[])
     }
 
     MainWindow w;
+    w.resize(QDesktopWidget().availableGeometry(QDesktopWidget().primaryScreen()).size()*0.5);
     w.setFiles(argc,argv);
     w.show();
 

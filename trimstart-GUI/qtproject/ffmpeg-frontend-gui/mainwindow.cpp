@@ -7,6 +7,7 @@
 #include <QFileDialog>
 #include <QProcess>
 #include "dialogprocess.h"
+#include <QMimeData>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -14,20 +15,42 @@ MainWindow::MainWindow(QWidget *parent) :
 {
 
     ui->setupUi(this);
-
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
-
 void MainWindow::setFiles(int argc, char *argv[])
 {
     ui->listWidget_files->clear();
 
     for (int i = 1;i<argc;i++){
         ui->listWidget_files->addItem(QString::fromLocal8Bit(argv[i]));
+    }
+}
+
+void MainWindow::dropEvent(QDropEvent *event)
+{
+    QList<QUrl> lists  = event->mimeData()->urls();
+    qDebug()<<lists;
+
+    foreach (QUrl filename , lists){
+        QList<QListWidgetItem*> resultlist = ui->listWidget_files->findItems(filename.toString(),Qt::MatchFixedString);
+        if (resultlist.size()>0){
+            continue;
+        }else{
+            qDebug()<< "Add File: "<<filename<<endl;
+            ui->listWidget_files->addItem(filename.toString());
+        }
+    }
+
+}
+
+void MainWindow::dragEnterEvent(QDragEnterEvent *event)
+{
+    if (event->mimeData()->hasUrls()){
+        event->accept();
     }
 }
 
@@ -184,7 +207,7 @@ void MainWindow::on_actionAbout_FFmpeg_triggered()
 
 void MainWindow::on_actionAbout_triggered()
 {
-    QMessageBox::about(this,tr("About this program"),tr("FFmpeg Ext\n\nI build this program in order to remove the beginning AD of Media Files,\nIt's simple and still under development.\nFeatures:\n1. Trim some seconds from the beginning of media files.\n2. CN & EN language included.\n\nMerrick Zhang\nanphorea@gmail.com"));
+    QMessageBox::about(this,tr("About this program"),tr("TrimStart\n\nI build this program in order to remove the beginning AD of Media Files,\nIt's simple and still under development.\nFeatures:\n1. Trim some seconds from the beginning of media files.\n2. CN & EN language included.\n\nMerrick Zhang\nanphorea@gmail.com"));
 }
 
 void MainWindow::on_actionAboutQt_triggered()

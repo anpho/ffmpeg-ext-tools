@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>392</width>
-    <height>482</height>
+    <width>718</width>
+    <height>589</height>
    </rect>
   </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
   <property name="windowTitle">
-   <string>FFmpeg Ext</string>
+   <string>TrimStart</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -312,8 +315,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>392</width>
-     <height>22</height>
+     <width>718</width>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">

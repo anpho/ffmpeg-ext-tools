@@ -5,6 +5,8 @@
 #include <QString>
 #include <vector>
 #include <QSettings>
+#include <QDropEvent>
+#include <QDragEnterEvent>
 namespace Ui {
 class MainWindow;
 }
@@ -17,6 +19,9 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     void setFiles(int argc,char* argv[]);
+    void dropEvent(QDropEvent *event);
+    void dragEnterEvent(QDragEnterEvent *event);
+
 
 private slots:
     void on_actionGet_ffmpeg_exe_triggered();
