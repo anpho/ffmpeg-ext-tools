@@ -62,6 +62,8 @@ void DialogProcess::start_read_err_output(){
     qDebug()<<qsl.last();
 }
 void DialogProcess::finish_process(int exitcode, QProcess::ExitStatus status){
+    Q_UNUSED(exitcode);
+    Q_UNUSED(status);
     ui->progressBar->setValue(currentProcessingFile+1);
     if (currentProcessingFile<_files.count()-1){
         process();
